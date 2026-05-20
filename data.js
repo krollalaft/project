@@ -113,7 +113,7 @@ const productsCatalog = [
 		category: 'ram',
 		brand: 'Corsair',
 		price: 4450,
-		image: '/images/ram/Corsair_Vengeance_LPX_16GB.jfif',
+		image: 'images/ram/Corsair_Vengeance_LPX_16GB.jpeg',
 		specs: {
 			type: 'DDR4',
 			capacity: '16 ГБ (2x8)',
