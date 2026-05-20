@@ -1,0 +1,357 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #0a0f1f;
+	font-family: 'Inter', sans-serif;
+	color: #eef2ff;
+	line-height: 1.5;
+}
+
+.app-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 2rem 2rem 1rem;
+}
+
+/* Шапка */
+.catalog-header {
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #1e2a4a;
+	padding-bottom: 1.5rem;
+}
+
+.logo-area {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.logo-icon {
+	font-size: 2rem;
+	background: #1e3a8a;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+	font-size: 1.9rem;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	background: linear-gradient(135deg, #c0e0ff, #3b82f6);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+h1 span {
+	background: none;
+	color: #60a5fa;
+	-webkit-background-clip: unset;
+	background-clip: unset;
+	font-weight: 500;
+}
+
+.subtitle {
+	color: #8ba0c0;
+	margin-top: 10px;
+	font-size: 0.9rem;
+}
+
+/* Панель управления */
+.controls-panel {
+	background: #0f172f;
+	border-radius: 24px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	border: 1px solid #1e2f4b;
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+	align-items: flex-end;
+}
+
+.search-wrapper {
+	flex: 2;
+	min-width: 220px;
+	position: relative;
+}
+
+.search-icon {
+	position: absolute;
+	left: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #5f7faf;
+}
+
+#searchInput {
+	width: 100%;
+	padding: 12px 16px 12px 44px;
+	background: #07111f;
+	border: 1px solid #253c60;
+	border-radius: 40px;
+	font-size: 1rem;
+	color: #f0f4ff;
+	font-family: 'Inter', sans-serif;
+	transition: all 0.2s;
+}
+
+#searchInput:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.filter-area {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+}
+
+.filter-area label {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: #9bb4d4;
+	letter-spacing: 0.3px;
+}
+
+select {
+	background: #07111f;
+	border: 1px solid #253c60;
+	padding: 10px 30px 10px 14px;
+	border-radius: 40px;
+	color: #eef2ff;
+	font-family: 'Inter', sans-serif;
+	font-size: 0.9rem;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2380a0d0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+}
+
+.reset-btn {
+	background: #1e2a4a;
+	border: 1px solid #3b5280;
+	padding: 10px 20px;
+	border-radius: 40px;
+	font-weight: 600;
+	color: #bbd7ff;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.reset-btn:hover {
+	background: #2d3b60;
+	color: white;
+	border-color: #5f8fd9;
+}
+
+.results-info {
+	font-size: 0.85rem;
+	margin: 1rem 0 1.2rem 0.5rem;
+	color: #8aa2ca;
+	font-weight: 500;
+}
+
+/* Сетка карточек */
+.catalog-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+	gap: 1.8rem;
+	margin: 1.5rem 0 2rem;
+}
+
+/* Карточка товара */
+.product-card {
+	background: linear-gradient(145deg, #0f172f, #0b1124);
+	border-radius: 28px;
+	border: 1px solid #1f314f;
+	overflow: hidden;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s;
+	box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+}
+
+.product-card:hover {
+	transform: translateY(-6px);
+	border-color: #2d4680;
+	box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+.card-header {
+	padding: 1.2rem 1.5rem 0.6rem;
+	border-bottom: 1px dashed #1f2c48;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+.product-name {
+	font-size: 1.3rem;
+	font-weight: 700;
+	letter-spacing: -0.3px;
+	color: #e2edff;
+}
+
+.product-brand {
+	font-size: 0.7rem;
+	background: #14223e;
+	padding: 4px 10px;
+	border-radius: 30px;
+	font-weight: 600;
+	color: #7ca5f0;
+	text-transform: uppercase;
+}
+
+.specs-list {
+	padding: 1rem 1.5rem;
+	flex-grow: 1;
+	background: #0a1022;
+	margin: 0.8rem 1rem;
+	border-radius: 20px;
+	font-size: 0.85rem;
+}
+
+.spec-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 0;
+	border-bottom: 1px solid #17213a;
+}
+
+.spec-item:last-child {
+	border-bottom: none;
+}
+
+.spec-label {
+	font-weight: 600;
+	color: #8aa8e0;
+}
+
+.spec-value {
+	font-weight: 500;
+	color: #cfdfff;
+	text-align: right;
+	max-width: 60%;
+	word-break: break-word;
+}
+
+.price-section {
+	padding: 0.8rem 1.5rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #18233f;
+	margin-top: auto;
+}
+
+.price {
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: #60a5fa;
+	letter-spacing: -0.5px;
+}
+
+.price small {
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: #7c8eb0;
+}
+
+.badge-cat {
+	background: #0e1a2f;
+	padding: 5px 12px;
+	border-radius: 40px;
+	font-size: 0.7rem;
+	font-weight: 500;
+	color: #6d92d9;
+}
+
+footer {
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: 1px solid #17223b;
+	margin-top: 2rem;
+	font-size: 0.8rem;
+	color: #5f79a3;
+}
+
+.loading-placeholder {
+	text-align: center;
+	padding: 3rem;
+	background: #0f172f;
+	border-radius: 32px;
+}
+
+@media (max-width: 700px) {
+	.app-container {
+		padding: 1rem;
+	}
+	.controls-panel {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.filter-area {
+		justify-content: space-between;
+	}
+}
+
+/* Обёртка для изображения */
+.card-image-wrapper {
+	width: 100%;
+	height: 200px;
+	background: #07111f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-bottom: 1px solid #1f314f;
+}
+
+/* Само изображение */
+.product-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* или contain, если хочешь видеть целую картинку */
+	transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+	transform: scale(1.05);
+}
+
+/* Если картинка не загрузилась — показываем заглушку */
+.product-image[src='images/placeholder.jpg'],
+.product-image:error {
+	object-fit: contain;
+	padding: 20px;
+	background: #0a1022;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 700px) {
+	.card-image-wrapper {
+		height: 160px;
+	}
+}
+
+/* Если картинка не загрузилась, показываем серый градиент */
+.product-image {
+	background: linear-gradient(135deg, #1e2a4a, #0f172f);
+}

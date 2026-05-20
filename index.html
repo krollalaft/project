@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PC Parts Catalog — твой гид по комплектующим</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Шапка с заголовком -->
+        <header class="catalog-header">
+            <div class="logo-area">
+                <span class="logo-icon">⚡</span>
+                <h1>PC<span>Parts</span> Catalog</h1>
+            </div>
+            <p class="subtitle">Комплектующие, периферия и аксессуары — всё в одном месте</p>
+        </header>
+
+        <!-- Блок поиска и фильтров -->
+        <div class="controls-panel">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-0.59 4.23-1.57L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"
+                        fill="currentColor" />
+                </svg>
+                <input type="text" id="searchInput" placeholder="Поиск по названию, процессору, чипсету...">
+            </div>
+
+            <div class="filter-area">
+                <label for="categoryFilter">Категория:</label>
+                <select id="categoryFilter">
+                    <option value="all">Все категории</option>
+                    <option value="cpu">Процессоры</option>
+                    <option value="motherboard">Материнские платы</option>
+                    <option value="ram">Оперативная память</option>
+                    <option value="storage">Накопители</option>
+                    <option value="peripheral">Периферия</option>
+                    <option value="accessory">Аксессуары</option>
+                </select>
+
+                <label for="brandFilter">Производитель:</label>
+                <select id="brandFilter">
+                    <option value="all">Все бренды</option>
+                </select>
+
+                <button id="resetFilters" class="reset-btn">Сбросить всё</button>
+            </div>
+        </div>
+
+        <!-- Счётчик результатов -->
+        <div class="results-info">
+            <span id="itemsCount"></span> товаров найдено
+        </div>
+
+        <!-- Сетка карточек товаров -->
+        <div id="catalogGrid" class="catalog-grid">
+            <!-- Карточки будут отрисованы через JS -->
+            <div class="loading-placeholder">Загрузка каталога...</div>
+        </div>
+
+        <!-- Подвал -->
+        <footer>
+            <p>⚙️ Актуальные характеристики. Каталог для энтузиастов.</p>
+        </footer>
+    </div>
+
+    <!-- Подключаем данные и скрипты -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

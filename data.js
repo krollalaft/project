@@ -1,0 +1,243 @@
+// data.js — весь каталог комплектующих
+const productsCatalog = [
+	// ========== ПРОЦЕССОРЫ (CPU) ==========
+	{
+		id: 1,
+		name: 'Intel Core i7-13700K',
+		category: 'cpu',
+		brand: 'Intel',
+		price: 38900,
+		image: 'images/cpu/intelcorei713700k.jpg',
+		specs: {
+			cores: '16 (8P+8E)',
+			threads: '24',
+			chipset: 'Z790, B760, H770',
+			socket: 'LGA 1700',
+			additional: 'Max Turbo 5.4 ГГц',
+		},
+	},
+	{
+		id: 2,
+		name: 'AMD Ryzen 7 7800X3D',
+		category: 'cpu',
+		brand: 'AMD',
+		price: 42500,
+		image: 'images/cpu/ryzen77800X3D.jpg',
+		specs: {
+			cores: '8',
+			threads: '16',
+			chipset: 'X670E, B650',
+			socket: 'AM5',
+			additional: '3D V-Cache',
+		},
+	},
+	{
+		id: 3,
+		name: 'Intel Core i5-13400F',
+		category: 'cpu',
+		brand: 'Intel',
+		price: 18700,
+		image: 'images/cpu/intelcorei513400F.jpg',
+		specs: {
+			cores: '10 (6P+4E)',
+			threads: '16',
+			chipset: 'B760, H610, Z790',
+			socket: 'LGA 1700',
+			additional: 'без графики',
+		},
+	},
+	// ========== МАТЕРИНСКИЕ ПЛАТЫ ==========
+	{
+		id: 4,
+		name: 'MSI MAG B650 TOMAHAWK',
+		category: 'motherboard',
+		brand: 'MSI',
+		price: 18700,
+		image: 'images/motherboards/msimagb650tomahawk.jpg',
+		specs: {
+			chipset: 'B650',
+			socket: 'AM5',
+			pcie_version: 'PCIe 5.0 x16',
+			ram_type: 'DDR5',
+			form_factor: 'ATX',
+		},
+	},
+	{
+		id: 5,
+		name: 'ASUS ROG STRIX Z790-E',
+		category: 'motherboard',
+		brand: 'ASUS',
+		price: 35200,
+		image: 'images/motherboards/asusrogstrixz790-E.jpg',
+		specs: {
+			chipset: 'Z790',
+			socket: 'LGA 1700',
+			pcie_version: 'PCIe 5.0',
+			ram_type: 'DDR5',
+			form_factor: 'ATX',
+		},
+	},
+	{
+		id: 6,
+		name: 'Gigabyte B760M DS3H',
+		category: 'motherboard',
+		brand: 'Gigabyte',
+		price: 9900,
+		image: 'images/motherboards/Gigabyte_B760M_DS3H.jpg',
+		specs: {
+			chipset: 'B760',
+			socket: 'LGA 1700',
+			pcie_version: 'PCIe 4.0',
+			ram_type: 'DDR4',
+			form_factor: 'Micro-ATX',
+		},
+	},
+	// ========== ОПЕРАТИВНАЯ ПАМЯТЬ ==========
+	{
+		id: 7,
+		name: 'Kingston FURY Beast 32GB',
+		category: 'ram',
+		brand: 'Kingston',
+		price: 8700,
+		image: 'images/ram/Kingston_FURY_Beast_32GB.jpg',
+		specs: {
+			type: 'DDR5',
+			capacity: '32 ГБ (2x16)',
+			timings: 'CL36-38-38',
+			frequency: '5600 МГц',
+		},
+	},
+	{
+		id: 8,
+		name: 'Corsair Vengeance LPX 16GB',
+		category: 'ram',
+		brand: 'Corsair',
+		price: 4450,
+		image: '/images/ram/Corsair_Vengeance_LPX_16GB.jfif',
+		specs: {
+			type: 'DDR4',
+			capacity: '16 ГБ (2x8)',
+			timings: 'CL16-18-18-36',
+			frequency: '3200 МГц',
+		},
+	},
+	{
+		id: 9,
+		name: 'G.Skill Trident Z5 RGB 32GB',
+		category: 'ram',
+		brand: 'G.Skill',
+		price: 12900,
+		image: 'images/ram/G.Skill_Trident_Z5_RGB_32GB.jpg',
+		specs: {
+			type: 'DDR5',
+			capacity: '32 ГБ',
+			timings: 'CL30-38-38-96',
+			frequency: '6000 МГц',
+		},
+	},
+	// ========== НАКОПИТЕЛИ ==========
+	{
+		id: 10,
+		name: 'Samsung 980 Pro 1TB',
+		category: 'storage',
+		brand: 'Samsung',
+		price: 8900,
+		image: 'images/storage/Samsung_980_Pro_1TB.jpg',
+		specs: {
+			capacity: '1 ТБ',
+			read_speed: '7000 МБ/с',
+			write_speed: '5000 МБ/с',
+			interface: 'NVMe PCIe 4.0',
+		},
+	},
+	{
+		id: 11,
+		name: 'WD Black SN850X 2TB',
+		category: 'storage',
+		brand: 'Western Digital',
+		price: 16200,
+		image: 'images/storage/WD_Black_SN850X_2TB.jpg',
+		specs: {
+			capacity: '2 ТБ',
+			read_speed: '7300 МБ/с',
+			write_speed: '6600 МБ/с',
+			interface: 'NVMe PCIe 4.0',
+		},
+	},
+	{
+		id: 12,
+		name: 'Kingston KC3000 512GB',
+		category: 'storage',
+		brand: 'Kingston',
+		price: 4900,
+		image: 'images/storage/Kingston_KC3000_512GB.jpg',
+		specs: {
+			capacity: '512 ГБ',
+			read_speed: '7000 МБ/с',
+			write_speed: '3700 МБ/с',
+			interface: 'NVMe PCIe 4.0',
+		},
+	},
+	// ========== ПЕРИФЕРИЯ ==========
+	{
+		id: 13,
+		name: 'Logitech G502 X Lightspeed',
+		category: 'peripheral',
+		brand: 'Logitech',
+		price: 12900,
+		image: 'images/peripheral/Logitech_G502_X_Lightspeed.jpg',
+		specs: {
+			type: 'Игровая мышь',
+			sensor: 'Hero 25K',
+			wireless: '2.4 ГГц / Bluetooth',
+			buttons: '13 программируемых',
+		},
+	},
+	{
+		id: 14,
+		name: 'Keychron K8 Pro',
+		category: 'peripheral',
+		brand: 'Keychron',
+		price: 10200,
+		image: 'images/peripheral/Keychron_K8_Pro.jpg',
+		specs: {
+			type: 'Механическая клавиатура',
+			layout: 'TKL',
+			switches: 'Gateron Pro Brown',
+			connectivity: 'Bluetooth / USB-C',
+		},
+	},
+	// ========== АКСЕССУАРЫ ==========
+	{
+		id: 15,
+		name: 'Arctic MX-6 (4g)',
+		category: 'accessory',
+		brand: 'Arctic',
+		price: 890,
+		image: 'images/accessory/Arctic_MX-6_(4g).jpg',
+		specs: {
+			type: 'Термопаста',
+			thermal_conductivity: '6.2 Вт/м·K',
+			viscosity: 'высокая',
+		},
+	},
+	{
+		id: 16,
+		name: 'Lian Li Strimer Plus V2',
+		category: 'accessory',
+		brand: 'Lian Li',
+		price: 4450,
+		image: 'images/accessory/Lian_Li_Strimer_Plus_V2.jfif',
+		specs: {
+			type: 'Кабель-удлинитель с подсветкой',
+			compatibility: '24-pin / 8-pin',
+			rgb: 'Addressable RGB',
+		},
+	},
+];
+
+// Дополнительно генерируем список уникальных брендов для фильтра
+function getUniqueBrands(products) {
+	const brands = new Set(products.map((p) => p.brand));
+	return Array.from(brands).sort();
+}
